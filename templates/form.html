@@ -1,0 +1,18 @@
+	<form action="{{url_for('results')}}" method="get">
+		<strong>Choose a range of restaurant scores:</strong>
+		<input type="radio" name="score" value="ninety">     >90
+		<input type="radio" name="score" value="seventy">    71 - 90
+		<input type="radio" name="score" value="sixty">      61 - 80
+		<input type="radio" name="score" value="least">      < 60
+
+		<br>
+		<strong>Choose a risk level:</strong>
+		<input type="radio" name="risk" value="High"> High Risk
+		<input type="radio" name="risk" value="Moderate"> Moderate Risk
+		<input type="radio" name="risk" value="Low"> Low Risk
+
+		<br>
+		<br>
+		<input id="submit-button" type="submit" value="Submit">
+	</form>
+	<br>

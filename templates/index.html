@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>San Francisco Restaurant Inspections</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='bootstrap.css')}}" />
+  <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}" />
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<h3>How healthy/clean is your favorite restaurant?</h3>
+			<br>
+			{% include 'form.html' %}
+
+			<p>Data comes from <a href="https://data.sfgov.org/Health-and-Social-Services/Food-Inspections-LIVES-Standard/pyih-qa8i">San Francisco Open Data Portal</a></p>
+		</div>
+	</div>
+	
+
+</body>
+</html>
