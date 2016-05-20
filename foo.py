@@ -46,4 +46,5 @@ def filter_func(score="", risk="", name=""):
   elif risk:
     filteredrows = filter_by_risk(risk, datarows)
 
+  filteredrows = [d for d in filteredrows if d['business_latitude'] and d['business_longitude']]
   return filteredrows

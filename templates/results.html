@@ -13,7 +13,7 @@
   <div class="container">
     <p>Go back to <a href="{{url_for('homepage')}}">home page</a></p>
 
-    <p>You searched by {{search_type}}. Below is a table which shows all the restaurants that satisfy the criterion you chose.</p>
+    <p>Below is a table which shows all the restaurants that satisfy the criterion you chose.</p>
 
     <div id="map"></div>
 
@@ -79,7 +79,7 @@
   };
   
   var geojsonMarkerOptions = {
-                      radius: 10,
+                      radius: 5,
                       fillColor: "#ff7800",
                       color: "#fff",
                       weight: 1,
@@ -92,7 +92,7 @@
                 },
                 onEachFeature: function(feature, layer) {
                   //Info shown on map popup
-                  layer.bindPopup('<strong>' + feature.properties.place + '</strong>' + '<br> Risk: ' + feature.properties.risk + '<br> Inspection Score: ' + feature.properties.inspection_score + '<br>Risk: ' + feature.properties.risk_category);
+                  layer.bindPopup('<strong>' + feature.properties.place + '</strong>' + '<br> Risk: ' + feature.properties.risk + '<br> Inspection Score: ' + feature.properties.score + '<br>Violation: ' + feature.properties.violation);
                   }
               });
   map.addLayer(dataLayer);
